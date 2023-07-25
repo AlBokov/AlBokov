@@ -1,0 +1,8 @@
+monthly_salary: int = int(input("Введите заработную плату в месяц: "))
+mortgage_interest: int = int(input("Введите, какой процент(%) уходит на ипотеку: "))
+mortgage_interest_life: int = int(input("Введите, какой процент(%) уходит на жизнь: "))
+
+mortgage: int = int(((monthly_salary / 100) * mortgage_interest) * 12)
+life: int = int(monthly_salary / 100 * (100 - mortgage_interest_life - mortgage_interest) * 12)
+
+print(f"\nВывод:\nНа ипотеку было потрачено: {mortgage} рублей\nБыло накоплено: {life}")
